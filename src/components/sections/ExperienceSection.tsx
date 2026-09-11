@@ -18,14 +18,14 @@ export function ExperienceSection() {
           className="reveal max-w-2xl mx-auto text-center"
         >
           <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1.5 text-xs font-bold tracking-[0.18em] uppercase text-ink">
-            <span className="size-2 rounded-full bg-coral"></span>Karir
+            <span className="size-2 rounded-full bg-coral"></span>Career
           </span>
           <h2 className="mt-5 text-3xl leading-tight font-black sm:text-4xl md:text-5xl">
-            Perjalanan{" "}
-            <span className="text-gradient-warm">pengalaman kerja</span>
+            Journey of{" "}
+            <span className="text-gradient-warm">work experience</span>
           </h2>
           <p className="text-muted-foreground mt-4 text-base leading-relaxed sm:text-lg">
-            Lima tahun tumbuh dari junior developer sampai memimpin proyek development.
+            Five years of growing from a junior developer to leading development projects.
           </p>
         </div>
 

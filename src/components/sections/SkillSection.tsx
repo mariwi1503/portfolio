@@ -50,12 +50,11 @@ export function SkillSection() {
             <span className="size-2 rounded-full bg-coral"></span>Tech Stack
           </span>
           <h2 className="mt-5 text-3xl leading-tight font-black sm:text-4xl md:text-5xl">
-            Peralatan yang saya{" "}
-            <span className="text-gradient-warm">gunakan</span>
+            Tools I{" "}
+            <span className="text-gradient-warm">use</span>
           </h2>
           <p className="text-muted-foreground mt-4 text-base leading-relaxed sm:text-lg">
-            Kombinasi tools yang saya pakai setiap hari untuk membangun produk
-            digital dari nol sampai jalan di production.
+            A combination of tools I use daily to build digital products from scratch to production.
           </p>
         </div>
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 relative z-10">
@@ -191,7 +190,7 @@ export function SkillSection() {
               <div className="grid size-12 place-items-center rounded-2xl border-2 border-ink bg-coral transition-transform duration-300 group-hover:rotate-6">
                 <FaSitemap className="text-xl" />
               </div>
-              <h3 className="mt-5 text-xl font-black">Arsitektur</h3>
+              <h3 className="mt-5 text-xl font-black">Architecture</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 <li className="bg-secondary rounded-full border border-ink/15 px-3 py-1 text-xs font-semibold">
                   Microservices
@@ -216,7 +215,7 @@ export function SkillSection() {
               <div className="grid size-12 place-items-center rounded-2xl border-2 border-ink bg-accent transition-transform duration-300 group-hover:rotate-6">
                 <FaToolbox className="text-xl" />
               </div>
-              <h3 className="mt-5 text-xl font-black">Lainnya</h3>
+              <h3 className="mt-5 text-xl font-black">Others</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 <li className="bg-secondary rounded-full border border-ink/15 px-3 py-1 text-xs font-semibold">
                   MinIO
@@ -292,7 +291,7 @@ export function SkillSection() {
             onClick={() => setIsModalOpen(true)}
             className="cursor-pointer rounded-xl border-2 border-ink bg-card px-5 py-2.5 text-sm font-bold shadow-[4px_4px_0_var(--ink)] transition-transform hover:-translate-y-1"
           >
-            Lihat Semua Teknologi
+            View All Technologies
           </button>
         </div>
       </div>
@@ -308,7 +307,7 @@ export function SkillSection() {
             <button
               onClick={() => setIsModalOpen(false)}
               className="cursor-pointer absolute right-4 top-4 sm:right-6 sm:top-6 grid size-10 place-items-center rounded-xl border-2 border-ink bg-card shadow-[2px_2px_0_var(--ink)] transition-transform hover:-translate-y-0.5"
-              aria-label="Tutup modal"
+              aria-label="Close modal"
             >
               <svg
                 width="16"
@@ -331,11 +330,10 @@ export function SkillSection() {
                 Stack
               </span>
               <h3 className="mt-4 text-2xl font-black sm:text-3xl">
-                Semua Teknologi
+                All Technologies
               </h3>
               <p className="mt-2 text-muted-foreground text-sm sm:text-base leading-relaxed">
-                Kumpulan bahasa pemrograman, framework, database, dan tools yang
-                pernah saya gunakan dan pelajari sepanjang karir saya.
+                A collection of programming languages, frameworks, databases, and tools I have used and learned throughout my career.
               </p>
             </div>
 

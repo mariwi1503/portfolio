@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t-2 border-ink bg-ink py-8 text-cream">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 text-sm sm:flex-row sm:px-6">
         <p className="font-display font-black">ary.dev</p>
-        <p className="text-cream/60">© 2026 — Dibuat dengan ☕ dan kode.</p>
+        <p className="text-cream/60">© 2026 — Built with ☕ and code.</p>
       </div>
     </footer>
   );

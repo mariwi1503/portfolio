@@ -22,7 +22,11 @@ export function HeroSection() {
             className="reveal"
           >
             <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-[3px_3px_0_var(--ink)]">
-              Tersedia untuk proyek baru
+              <span className="relative flex size-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-75"></span>
+                <span className="relative inline-flex size-2 rounded-full bg-mint"></span>
+              </span>
+              Available for new projects
             </span>
           </div>
           <div
@@ -30,7 +34,7 @@ export function HeroSection() {
             className="reveal"
           >
             <h1 className="mt-6 text-4xl leading-[1.05] font-black sm:text-6xl lg:text-7xl">
-              Halo, saya <span className="text-gradient-cool">Ary</span>
+              Hi, I&apos;m <span className="text-gradient-cool">Ary</span>
               <br />
               <span className="relative inline-block">Backend Engineer</span>
             </h1>
@@ -40,10 +44,10 @@ export function HeroSection() {
             className="reveal"
           >
             <p className="text-muted-foreground mt-7 max-w-xl text-base leading-relaxed sm:text-lg text-justify">
-              Hampir 5 tahun membangun sistem backend yang cepat, aman, dan
-              mudah dirawat — dari REST &amp; API service, arsitektur database,
-              sampai pipeline CI/CD. Juga nyaman menyentuh sisi frontend dengan
-              React dan Next.js serta membangun Mobile Apps dengan Codex sampai live di Appstore dan playstore.</p>
+              Nearly 5 years of building fast, secure, and
+              maintainable backend systems — from REST &amp; API services, database architecture,
+              to CI/CD pipelines. Also comfortable working on the frontend with
+              React and Next.js, as well as building Mobile Apps from scratch using AI Tools until live on the App Store and Play Store.</p>
           </div>
           <div
             style={{ transitionDelay: "240ms" }}
@@ -54,13 +58,13 @@ export function HeroSection() {
                 href="#projek"
                 className="rounded-xl border-2 border-ink bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-[5px_5px_0_var(--ink)] transition-transform hover:-translate-y-1"
               >
-                Lihat Projek
+                View Projects
               </Link>
               <Link
                 href="#kontak"
                 className="rounded-xl border-2 border-ink bg-card px-6 py-3 text-sm font-bold shadow-[5px_5px_0_var(--ink)] transition-transform hover:-translate-y-1"
               >
-                Ajak Kolaborasi
+                Let&apos;s Collaborate
               </Link>
               <div className="flex items-center gap-2">
                 <Link
@@ -99,7 +103,7 @@ export function HeroSection() {
                   4+
                 </dt>
                 <dd className="text-muted-foreground mt-1 text-[11px] font-semibold uppercase sm:text-xs">
-                  Tahun Pengalaman
+                  Years of Experience
                 </dd>
               </div>
               <div className="rounded-2xl border-2 border-ink bg-card px-3 py-4">
@@ -107,7 +111,7 @@ export function HeroSection() {
                   10+
                 </dt>
                 <dd className="text-muted-foreground mt-1 text-[11px] font-semibold uppercase sm:text-xs">
-                  Projek Selesai
+                  Projects Completed
                 </dd>
               </div>
               <div className="rounded-2xl border-2 border-ink bg-card px-3 py-4">
@@ -115,7 +119,7 @@ export function HeroSection() {
                   100%
                 </dt>
                 <dd className="text-muted-foreground mt-1 text-[11px] font-semibold uppercase sm:text-xs">
-                  Tanggung Jawab
+                  Responsibility
                 </dd>
               </div>
             </dl>

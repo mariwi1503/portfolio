@@ -8,7 +8,7 @@ const projects = [
     title: "Halo Trubus",
     tags: ["Web + Mobile", "2026"],
     description:
-      "Halo Trubus adalah aplikasi pertanian terpadu yang membantu Anda memenuhi kebutuhan berkebun dan budidaya dengan lebih mudah, praktis, dan terpercaya. Melalui Halo Trubus, Anda dapat berbelanja berbagai produk pertanian, membaca artikel informatif, serta berkonsultasi langsung dengan ahli untuk mendapatkan solusi yang sesuai dengan kebutuhan tanaman Anda.",
+      "Halo Trubus is an integrated agricultural application that helps you fulfill your gardening and cultivation needs more easily, practically, and reliably. Through Halo Trubus, you can shop for various agricultural products, read informative articles, and consult directly with experts to get solutions tailored to your plants' needs.",
     ownership: "PT. Trubus Mitra Swadaya",
     role: "Fullstack Engineer",
     contribution:
@@ -27,7 +27,7 @@ const projects = [
     ownership: "Perkim KSB",
     role: "Backend and Devops Engineer",
     contribution:
-      "Membangun keseluruhan aplikasi dari sisi frontend hingga backend, serta melakukan deployment ke server produksi.",
+      "Built the entire application from frontend to backend, as well as deploying it to the production server.",
     status: "live",
     url: "https://silaju.com",
     techs: ["Node.js", "PostgreSQL", "React", "MinIO"],
@@ -138,7 +138,7 @@ const projects = [
     description:
       "This is a point of sales application created specifically for the management of goods at the 'Walidain' store.",
     ownership: "This Product is currently owned by 'Walidain' store.",
-    role: "building the server-side application that powers both web and mobile platforms",
+    role: "Backend Developer",
     contribution:
       "Building the server-side application that powers both web and mobile platforms",
     status: "live",
@@ -240,12 +240,11 @@ export function ProjectSection() {
             <span className="size-2 rounded-full bg-coral"></span>Portfolio
           </span>
           <h2 className="mt-5 text-3xl leading-tight font-black sm:text-4xl md:text-5xl">
-            Projek yang pernah{" "}
-            <span className="text-gradient-warm">saya kerjakan</span>
+            Projects I have{" "}
+            <span className="text-gradient-warm">worked on</span>
           </h2>
           <p className="text-muted-foreground mt-4 text-base leading-relaxed sm:text-lg">
-            Beberapa produk yang saya bangun — dari arsitektur backend,
-            database, sampai antarmuka yang dipakai pengguna sehari-hari.
+            Some of the products I&apos;ve built — from backend architecture and databases to user interfaces used daily.
           </p>
         </div>
 
@@ -276,7 +275,7 @@ export function ProjectSection() {
             onClick={() => setIsModalOpen(true)}
             className="cursor-pointer rounded-xl border-2 border-ink bg-card px-6 py-3 text-sm font-bold shadow-[4px_4px_0_var(--ink)] transition-transform hover:-translate-y-1"
           >
-            Lihat Semua Projek ({projects.length})
+            View All Projects ({projects.length})
           </button>
         </div>
       </div>
@@ -293,7 +292,7 @@ export function ProjectSection() {
             <button
               onClick={() => setIsModalOpen(false)}
               className="cursor-pointer absolute right-4 top-4 sm:right-6 sm:top-6 grid size-10 place-items-center rounded-xl border-2 border-ink bg-card shadow-[2px_2px_0_var(--ink)] transition-transform hover:-translate-y-0.5"
-              aria-label="Tutup modal"
+              aria-label="Close modal"
             >
               <svg
                 width="16"
@@ -312,14 +311,13 @@ export function ProjectSection() {
 
             <div className="mb-8 pr-12">
               <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-3 py-1 text-[10px] font-bold tracking-wider uppercase">
-                <span className="size-1.5 rounded-full bg-coral"></span>Katalog
+                <span className="size-1.5 rounded-full bg-coral"></span>Catalog
               </span>
               <h3 className="mt-4 text-2xl font-black sm:text-3xl">
-                Semua Projek
+                All Projects
               </h3>
               <p className="mt-2 text-muted-foreground text-sm sm:text-base leading-relaxed">
-                Daftar lengkap produk digital yang pernah saya bangun. Klik
-                kartu untuk melihat detail projek.
+                A complete list of digital products I have built. Click a card to see project details.
               </p>
             </div>
 

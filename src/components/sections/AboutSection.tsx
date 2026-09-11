@@ -32,15 +32,15 @@ export function AboutSection() {
             className="reveal max-w-2xl"
           >
             <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1.5 text-xs font-bold tracking-[0.18em] uppercase">
-              <span className="size-2 rounded-full bg-coral"></span>Tentang Saya
+              <span className="size-2 rounded-full bg-coral"></span>About Me
             </span>
             <h2 className="mt-5 text-3xl leading-tight font-black sm:text-4xl md:text-5xl">
-              Bukan sekadar menulis{" "}
-              <span className="text-gradient-warm">kode</span>
+              More than just writing{" "}
+              <span className="text-gradient-warm">code</span>
             </h2>
             <p className="text-muted-foreground mt-4 text-base leading-relaxed sm:text-lg">
-              Saya percaya produk yang baik lahir dari fondasi teknis yang rapi
-              dan komunikasi yang sehat.
+              I believe a good product is born from a neat technical foundation and
+              healthy communication.
             </p>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -49,9 +49,9 @@ export function AboutSection() {
               className="reveal"
             >
               <div className="h-full rounded-2xl border-2 border-ink bg-card p-5 transition-transform hover:-translate-y-1">
-                <h3 className="mt-3 text-base font-black">Kode yang dirawat</h3>
+                <h3 className="mt-3 text-base font-black">Maintainable Code</h3>
                 <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                  Bersih, teruji, dan mudah dilanjutkan orang lain.
+                  Clean, tested, and easy for others to continue.
                 </p>
               </div>
             </div>
@@ -60,9 +60,9 @@ export function AboutSection() {
               className="reveal"
             >
               <div className="h-full rounded-2xl border-2 border-ink bg-card p-5 transition-transform hover:-translate-y-1">
-                <h3 className="mt-3 text-base font-black">Performa dulu</h3>
+                <h3 className="mt-3 text-base font-black">Performance First</h3>
                 <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                  Query, caching, dan struktur data dipikirkan sejak awal.
+                  Queries, caching, and data structures are considered from the start.
                 </p>
               </div>
             </div>
@@ -71,9 +71,9 @@ export function AboutSection() {
               className="reveal"
             >
               <div className="h-full rounded-2xl border-2 border-ink bg-card p-5 transition-transform hover:-translate-y-1">
-                <h3 className="mt-3 text-base font-black">Komunikasi jelas</h3>
+                <h3 className="mt-3 text-base font-black">Clear Communication</h3>
                 <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                  Progres transparan, tanpa jargon yang membingungkan.
+                  Transparent progress, without confusing jargon.
                 </p>
               </div>
             </div>
@@ -82,9 +82,9 @@ export function AboutSection() {
               className="reveal"
             >
               <div className="h-full rounded-2xl border-2 border-ink bg-card p-5 transition-transform hover:-translate-y-1">
-                <h3 className="mt-3 text-base font-black">Belajar terus</h3>
+                <h3 className="mt-3 text-base font-black">Continuous Learning</h3>
                 <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                  Selalu mencoba tools baru di proyek sampingan.
+                  Always trying out new tools in side projects.
                 </p>
               </div>
             </div>

@@ -133,7 +133,7 @@ export const testimonial = [
   {
     name: "Syarip Mas'ud",
     review:
-      "Sampai testimoni ini saya buat, saya belum pernah bertemu dengan beliau, tetapi interaksi yang kami jalani selama bekerja bersama menunjukkan bahwa Ary adalah pribadi yang amanah dan dapat dipercaya. Ia selalu memberikan yang terbaik dalam pekerjaannya, menyelesaikan tugas dengan penuh tanggung jawab. **InsyaAllah beliau adalah insan yang tidak hanya kompeten secara teknis, tetapi juga memiliki akhlak yang baik.**",
+      "Until this testimonial was written, I had never met him in person, but the interactions we had while working together showed that Ary is a trustworthy and reliable person. He always gives his best in his work, completing tasks with full responsibility. **God willing, he is a person who is not only technically competent, but also has good character.**",
     designation: "Fullstack Developer",
     linkedin: "https://www.linkedin.com/in/syarip-mas-ud-220023168/",
     image: "/images/syarif.jpeg",
@@ -149,7 +149,7 @@ export const testimonial = [
   {
     name: "Fajar Ega Firmansyah",
     review:
-      "Mas ary merupakan sosok yang pekerja keras serta skill beliau dalam IT dan **memimpin tim** developer sangat baik.",
+      "Ary is a hard-working person and his skills in IT and **leading a team** of developers are excellent.",
     designation: "Senior Mobile Developer",
     linkedin: "https://id.linkedin.com/in/fajar-ega-firmansyah-b60992145",
     image: "/images/fajar.jpeg",
@@ -157,7 +157,7 @@ export const testimonial = [
   {
     name: "Riovaldo Todoan",
     review:
-      "Ary adalah seorang developer yang **cekatan dan sangat profesional.** Mampu membangun sebuah sistem yang solid dan sangat menyenangkan bekerja sama dengan beliau.",
+      "Ary is a developer who is **agile and highly professional.** Capable of building a solid system and it is very pleasant to work with him.",
     designation: "QA Engineer",
     image: "/images/rio.jpeg",
     linkedin: "https://www.linkedin.com/in/todoantodoan/",
@@ -165,7 +165,7 @@ export const testimonial = [
   {
     name: "Agus Setiawan",
     review:
-      "Mas Ary adalah mentor saya di backend. **Beliau luar biasa**, tidak hanya menjelaskan teknikal skill yang kuat, tetapi juga memperlihatkan indahnya backend. Mas Ary sangat baik dan sabar menghadapi pertanyaan-pertanyaan saya. Tidak ada kata yang pas kecuali Jazakkalahu Khairan untuk ilmu dan semangatnya. Belajar dengan beliau selalu ada pengetahuan baru dan semangat baru.",
+      "Ary is my mentor in backend. **He is extraordinary**, not only demonstrating strong technical skills, but also showing the beauty of backend development. Ary is very kind and patient in answering my questions. There is no suitable word other than Jazakkallahu Khairan for his knowledge and enthusiasm. Learning with him always brings new knowledge and fresh enthusiasm.",
     designation: "Fullstack Developer",
     image: "/images/agus.jpeg",
     linkedin: "https://www.linkedin.com/in/agus-setiawan-50657a266",
@@ -173,7 +173,7 @@ export const testimonial = [
   {
     name: "Widodo",
     review:
-      "Beliau adalah salah satu orang yang **berjasa dalam karir saya di dunia programming**, khususnya di bidang Backend Developer. Berawal kenal di salah satu media sosial sampai menjadi mentor saya dalam mendalami bidang ini.",
+      "He is one of the people who has **played a big role in my programming career**, especially in the Backend Developer field. Starting from knowing each other on social media until he became my mentor in deepening this field.",
     designation: "Backend developer",
     image: "/images/widodo.jpeg",
     linkedin: "https://www.linkedin.com/in/widodo-341a45307",
@@ -181,7 +181,7 @@ export const testimonial = [
   {
     name: "Irfan Nesya",
     review:
-      "Mas Ari seorang mentor yang baik dan **inspirator dalam career**, dia bersedia mengajarkan hal yang sama berulang kali jika masih belum bisa dimengerti dan menjelaskannya dengan sabar. Dengan pengalamannya yang luar biasa di bidang backend penjelasannya menjadi logis dan bisa diterima oleh semua orang.",
+      "Ari is a good mentor and **an inspiration in career**, he is willing to teach the same thing over and over again if it's still not understood and explains it patiently. With his extraordinary experience in the backend field, his explanations become logical and can be accepted by everyone.",
     designation: "Freelance",
     image: "/images/irfan.jpeg",
     linkedin: "https://www.linkedin.com/in/irfannesya",
@@ -189,7 +189,7 @@ export const testimonial = [
   {
     name: "Rabiatul A",
     review:
-      "Tak ada kata yang cukup untuk menggambarkan betapa bersyukurnya saya memiliki mentor seperti Kak Arie. Dari awal hingga saat ini, setiap ilmu yang dibagikannya selalu disampaikan dengan penuh kesabaran dan ketulusan yang luar biasa, seolah beliau benar-benar memahami apa yang kami butuhkan untuk berkembang. ",
+      "There are not enough words to describe how grateful I am to have a mentor like Mas Ary. From the beginning until now, every piece of knowledge he shares is always delivered with incredible patience and sincerity, as if he truly understands what we need to grow.",
     designation: "Resting Entrepreneur",
     image: '',
     linkedin: "https://www.linkedin.com/in/findabbyhere-a-4a99a0336",

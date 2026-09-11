@@ -53,11 +53,11 @@ export function TestimonialSection() {
           className="reveal max-w-2xl mx-auto text-center"
         >
           <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1.5 text-xs font-bold tracking-[0.18em] uppercase">
-            <span className="size-2 rounded-full bg-coral"></span>Kata Mereka
+            <span className="size-2 rounded-full bg-coral"></span>What They Say
           </span>
           <h2 className="mt-5 text-3xl leading-tight font-black sm:text-4xl md:text-5xl">
-            Testimoni dari{" "}
-            <span className="text-gradient-warm">rekan &amp; kolega</span>
+            Testimonials from{" "}
+            <span className="text-gradient-warm">peers &amp; colleagues</span>
           </h2>
         </div>
 
@@ -91,7 +91,7 @@ export function TestimonialSection() {
                           ></div>
                           <Image
                             src={imgSrc}
-                            alt={`Foto ${item.name}`}
+                            alt={`Photo of ${item.name}`}
                             width={144}
                             height={144}
                             className="relative size-28 rounded-[1.5rem] border-2 border-ink object-cover sm:size-36 bg-white"
@@ -155,7 +155,7 @@ export function TestimonialSection() {
                   <button
                     key={idx}
                     onClick={() => setCurrentIndex(idx)}
-                    aria-label={`Ke testimoni ${idx + 1}`}
+                    aria-label={`To testimonial ${idx + 1}`}
                     className={`h-2.5 rounded-full border-2 border-ink transition-all ${
                       currentIndex === idx
                         ? `w-8 ${dotColors[idx % dotColors.length]}`
@@ -168,7 +168,7 @@ export function TestimonialSection() {
               <div className="flex gap-4 shrink-0">
                 <button
                   onClick={prev}
-                  aria-label="Testimoni sebelumnya"
+                  aria-label="Previous testimonial"
                   className="grid size-12 place-items-center rounded-xl border-2 border-ink bg-card shadow-[3px_3px_0_var(--ink)] transition-transform hover:-translate-y-0.5 hover:bg-cream"
                 >
                   <svg
@@ -186,7 +186,7 @@ export function TestimonialSection() {
                 </button>
                 <button
                   onClick={next}
-                  aria-label="Testimoni berikutnya"
+                  aria-label="Next testimonial"
                   className="grid size-12 place-items-center rounded-xl border-2 border-ink bg-card shadow-[3px_3px_0_var(--ink)] transition-transform hover:-translate-y-0.5 hover:bg-cream"
                 >
                   <svg

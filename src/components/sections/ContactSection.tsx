@@ -15,13 +15,13 @@ export function ContactSection() {
             <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div>
                 <h2 className="text-3xl leading-tight font-black text-ink sm:text-5xl">
-                  Punya ide projek?
+                  Have a project idea?
                   <br />
-                  Mari kita ngobrol.
+                  Let&apos;s talk.
                 </h2>
                 <p className="mt-4 max-w-md leading-relaxed text-ink/75">
-                  Terbuka untuk kerja penuh waktu, kontrak, paruh waktu maupun konsultasi
-                  arsitektur software. Biasanya saya balas dalam 1-2 jam
+                  Open for full-time work, contracts, part-time, or software architecture
+                  consultation. I usually reply within 1-2 hours.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
@@ -30,7 +30,7 @@ export function ContactSection() {
                     className="inline-flex items-center gap-2 rounded-xl border-2 border-ink bg-ink px-6 py-3 text-sm font-bold text-cream shadow-[5px_5px_0_var(--card)] transition-transform hover:-translate-y-1"
                   >
                     {" "}
-                    Kirim Email
+                    Send Email
                   </Link>
                   <Link
                     href="https://wa.me/6285338714313"
@@ -87,7 +87,7 @@ export function ContactSection() {
                   </span>
                   <span className="min-w-0">
                     <span className="text-muted-foreground block text-[11px] font-bold uppercase">
-                      Lokasi
+                      Location
                     </span>
                     <span className="block truncate text-sm font-bold">
                       Batam, Indonesia

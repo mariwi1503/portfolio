@@ -20,10 +20,10 @@ export function Header() {
       <nav className="relative mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded-2xl border-2 border-ink px-4 py-3 transition-all duration-300 md:flex md:justify-between bg-card/60 backdrop-blur-sm z-50">
         <Link href="#top" className="flex min-w-0 items-center gap-2" onClick={closeMobileMenu}>
           <span className="grid size-9 shrink-0 place-items-center rounded-xl border-2 border-ink bg-citrus font-display text-sm font-black">
-            AD
+            MA
           </span>
           <span className="truncate font-display text-base font-black">
-            ary.dev
+            Muhammad Ary
           </span>
         </Link>
         <div className="hidden items-center gap-1 md:flex">
@@ -37,35 +37,35 @@ export function Header() {
             href="#projek"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            Projek
+            Projects
           </Link>
           <Link
             href="#pengalaman"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            Pengalaman
+            Experience
           </Link>
           <Link
             href="#testimoni"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            Testimoni
+            Testimonials
           </Link>
           <Link
             href="#tentang"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            Tentang
+            About
           </Link>
           <Link
             href="#kontak"
             className="ml-2 rounded-xl border-2 border-ink bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow-[3px_3px_0_var(--ink)] transition-transform hover:-translate-y-0.5"
           >
-            Hubungi Saya
+            Contact Me
           </Link>
         </div>
         <button
-          aria-label={isMobileMenuOpen ? "Tutup menu" : "Buka menu"}
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           className="grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink bg-card md:hidden transition-transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none"
           onClick={toggleMobileMenu}
         >
@@ -93,35 +93,35 @@ export function Header() {
               onClick={closeMobileMenu}
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
-              Projek
+              Projects
             </Link>
             <Link
               href="#pengalaman"
               onClick={closeMobileMenu}
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
-              Pengalaman
+              Experience
             </Link>
             <Link
               href="#testimoni"
               onClick={closeMobileMenu}
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
-              Testimoni
+              Testimonials
             </Link>
             <Link
               href="#tentang"
               onClick={closeMobileMenu}
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
-              Tentang
+              About
             </Link>
             <Link
               href="#kontak"
               onClick={closeMobileMenu}
               className="mt-2 text-center rounded-xl border-2 border-ink bg-primary px-4 py-3 text-sm font-bold text-primary-foreground shadow-[4px_4px_0_var(--ink)] transition-transform active:translate-y-1 active:shadow-none"
             >
-              Hubungi Saya
+              Contact Me
             </Link>
           </div>
         </div>
