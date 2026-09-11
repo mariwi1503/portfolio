@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaXmark } from "react-icons/fa6";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -31,38 +33,56 @@ export function Header() {
             href="#skill"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            Skills
+            {t("nav.skills")}
           </Link>
           <Link
             href="#projek"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            Projects
+            {t("nav.projects")}
           </Link>
           <Link
             href="#pengalaman"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            Experience
+            {t("nav.experience")}
           </Link>
           <Link
             href="#testimoni"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            Testimonials
+            {t("nav.testimonials")}
           </Link>
           <Link
             href="#tentang"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            About
+            {t("nav.about")}
           </Link>
-          <Link
-            href="#kontak"
-            className="ml-2 rounded-xl border-2 border-ink bg-primary px-4 py-2 text-sm font-bold text-primary-foreground shadow-[3px_3px_0_var(--ink)] transition-transform hover:-translate-y-0.5"
+          <button
+            onClick={toggleLanguage}
+            className="ml-2 flex items-center rounded-xl border-2 border-ink bg-card p-1 shadow-[3px_3px_0_var(--ink)] transition-transform hover:-translate-y-0.5"
+            aria-label="Toggle Language"
           >
-            Contact Me
-          </Link>
+            <span
+              className={`rounded-lg px-3 py-1.5 text-xs font-black transition-all ${
+                language === 'en'
+                  ? 'bg-primary text-primary-foreground border-2 border-ink shadow-[2px_2px_0_var(--ink)]'
+                  : 'text-muted-foreground border-2 border-transparent'
+              }`}
+            >
+              EN
+            </span>
+            <span
+              className={`rounded-lg px-3 py-1.5 text-xs font-black transition-all ${
+                language === 'id'
+                  ? 'bg-primary text-primary-foreground border-2 border-ink shadow-[2px_2px_0_var(--ink)]'
+                  : 'text-muted-foreground border-2 border-transparent'
+              }`}
+            >
+              ID
+            </span>
+          </button>
         </div>
         <button
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
@@ -86,43 +106,45 @@ export function Header() {
               onClick={closeMobileMenu}
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
-              Skill
+              {t("nav.skills")}
             </Link>
             <Link
               href="#projek"
               onClick={closeMobileMenu}
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
-              Projects
+              {t("nav.projects")}
             </Link>
             <Link
               href="#pengalaman"
               onClick={closeMobileMenu}
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
-              Experience
+              {t("nav.experience")}
             </Link>
             <Link
               href="#testimoni"
               onClick={closeMobileMenu}
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
-              Testimonials
+              {t("nav.testimonials")}
             </Link>
             <Link
               href="#tentang"
               onClick={closeMobileMenu}
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
-              About
+              {t("nav.about")}
             </Link>
-            <Link
-              href="#kontak"
-              onClick={closeMobileMenu}
-              className="mt-2 text-center rounded-xl border-2 border-ink bg-primary px-4 py-3 text-sm font-bold text-primary-foreground shadow-[4px_4px_0_var(--ink)] transition-transform active:translate-y-1 active:shadow-none"
+            <button
+              onClick={() => {
+                toggleLanguage();
+                closeMobileMenu();
+              }}
+              className="mt-2 text-center rounded-xl border-2 border-ink bg-primary px-4 py-3 text-sm font-black text-primary-foreground shadow-[4px_4px_0_var(--ink)] transition-transform active:translate-y-1 active:shadow-none"
             >
-              Contact Me
-            </Link>
+              {language === 'en' ? 'Switch to Indonesian (ID)' : 'Beralih ke Inggris (EN)'}
+            </button>
           </div>
         </div>
       )}

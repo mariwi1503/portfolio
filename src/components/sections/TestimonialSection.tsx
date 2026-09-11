@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { testimonial } from "@/constants";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Helper to format bold text (markdown style **bold**)
 const formatReview = (text: string) => {
@@ -22,6 +23,7 @@ const formatReview = (text: string) => {
 export function TestimonialSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const { t, language } = useLanguage();
 
   const dotColors = ["bg-mint", "bg-citrus", "bg-sky", "bg-lilac", "bg-coral"];
 
@@ -53,11 +55,11 @@ export function TestimonialSection() {
           className="reveal max-w-2xl mx-auto text-center"
         >
           <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1.5 text-xs font-bold tracking-[0.18em] uppercase">
-            <span className="size-2 rounded-full bg-coral"></span>What They Say
+            <span className="size-2 rounded-full bg-coral"></span>{t("testimonial.badge")}
           </span>
           <h2 className="mt-5 text-3xl leading-tight font-black sm:text-4xl md:text-5xl">
-            Testimonials from{" "}
-            <span className="text-gradient-warm">peers &amp; colleagues</span>
+            {t("testimonial.title1")}
+            <span className="text-gradient-warm">{t("testimonial.title2")}</span>
           </h2>
         </div>
 
@@ -101,7 +103,7 @@ export function TestimonialSection() {
                         {/* Content */}
                         <div className="min-w-0 flex flex-col flex-grow text-center md:text-left">
                           <blockquote className="text-lg leading-relaxed font-semibold sm:text-xl lg:text-2xl text-ink">
-                            “{formatReview(item.review)}”
+                            “{formatReview(item.review[language])}”
                           </blockquote>
 
                           <figcaption className="mt-8 flex flex-col sm:flex-row items-center gap-4 border-t-2 border-ink/10 pt-6">

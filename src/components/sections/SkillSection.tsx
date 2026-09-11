@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { FaServer, FaDatabase, FaLaptopCode, FaInfinity, FaSitemap, FaToolbox } from "react-icons/fa6";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const techIcons = [
   { name: "Android", src: "/icons/android.png" },
@@ -34,6 +35,7 @@ const row2 = techIcons.slice(11);
 
 export function SkillSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <section
@@ -47,14 +49,14 @@ export function SkillSection() {
           className="reveal max-w-2xl mx-auto text-center"
         >
           <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1.5 text-xs font-bold tracking-[0.18em] uppercase">
-            <span className="size-2 rounded-full bg-coral"></span>Tech Stack
+            <span className="size-2 rounded-full bg-coral"></span>{t("skill.badge")}
           </span>
           <h2 className="mt-5 text-3xl leading-tight font-black sm:text-4xl md:text-5xl">
-            Tools I{" "}
-            <span className="text-gradient-warm">use</span>
+            {t("skill.title1")}
+            <span className="text-gradient-warm">{t("skill.title2")}</span>
           </h2>
           <p className="text-muted-foreground mt-4 text-base leading-relaxed sm:text-lg">
-            A combination of tools I use daily to build digital products from scratch to production.
+            {t("skill.subtitle")}
           </p>
         </div>
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 relative z-10">
@@ -66,7 +68,7 @@ export function SkillSection() {
               <div className="grid size-12 place-items-center rounded-2xl border-2 border-ink bg-mint transition-transform duration-300 group-hover:rotate-6">
                 <FaServer className="text-xl" />
               </div>
-              <h3 className="mt-5 text-xl font-black">Backend Engineering</h3>
+              <h3 className="mt-5 text-xl font-black">{t("skill.cat1")}</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 <li className="bg-secondary rounded-full border border-ink/15 px-3 py-1 text-xs font-semibold">
                   Node.js
@@ -97,7 +99,7 @@ export function SkillSection() {
               <div className="grid size-12 place-items-center rounded-2xl border-2 border-ink bg-sky transition-transform duration-300 group-hover:rotate-6">
                 <FaDatabase className="text-xl" />
               </div>
-              <h3 className="mt-5 text-xl font-black">Database</h3>
+              <h3 className="mt-5 text-xl font-black">{t("skill.cat2")}</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 <li className="bg-secondary rounded-full border border-ink/15 px-3 py-1 text-xs font-semibold">
                   PostgreSQL
@@ -131,7 +133,7 @@ export function SkillSection() {
               <div className="grid size-12 place-items-center rounded-2xl border-2 border-ink bg-citrus transition-transform duration-300 group-hover:rotate-6">
                 <FaLaptopCode className="text-xl" />
               </div>
-              <h3 className="mt-5 text-xl font-black">Frontend</h3>
+              <h3 className="mt-5 text-xl font-black">{t("skill.cat3")}</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 <li className="bg-secondary rounded-full border border-ink/15 px-3 py-1 text-xs font-semibold">
                   React
@@ -162,7 +164,7 @@ export function SkillSection() {
               <div className="grid size-12 place-items-center rounded-2xl border-2 border-ink bg-lilac transition-transform duration-300 group-hover:rotate-6">
                 <FaInfinity className="text-xl" />
               </div>
-              <h3 className="mt-5 text-xl font-black">DevOps &amp; CI/CD</h3>
+              <h3 className="mt-5 text-xl font-black">{t("skill.cat4")}</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 <li className="bg-secondary rounded-full border border-ink/15 px-3 py-1 text-xs font-semibold">
                   Docker
@@ -190,7 +192,7 @@ export function SkillSection() {
               <div className="grid size-12 place-items-center rounded-2xl border-2 border-ink bg-coral transition-transform duration-300 group-hover:rotate-6">
                 <FaSitemap className="text-xl" />
               </div>
-              <h3 className="mt-5 text-xl font-black">Architecture</h3>
+              <h3 className="mt-5 text-xl font-black">{t("skill.cat5")}</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 <li className="bg-secondary rounded-full border border-ink/15 px-3 py-1 text-xs font-semibold">
                   Microservices
@@ -215,7 +217,7 @@ export function SkillSection() {
               <div className="grid size-12 place-items-center rounded-2xl border-2 border-ink bg-accent transition-transform duration-300 group-hover:rotate-6">
                 <FaToolbox className="text-xl" />
               </div>
-              <h3 className="mt-5 text-xl font-black">Others</h3>
+              <h3 className="mt-5 text-xl font-black">{t("skill.cat6")}</h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 <li className="bg-secondary rounded-full border border-ink/15 px-3 py-1 text-xs font-semibold">
                   MinIO
@@ -291,7 +293,7 @@ export function SkillSection() {
             onClick={() => setIsModalOpen(true)}
             className="cursor-pointer rounded-xl border-2 border-ink bg-card px-5 py-2.5 text-sm font-bold shadow-[4px_4px_0_var(--ink)] transition-transform hover:-translate-y-1"
           >
-            View All Technologies
+            {t("skill.viewAll")}
           </button>
         </div>
       </div>
@@ -326,14 +328,13 @@ export function SkillSection() {
 
             <div className="mb-8 pr-12">
               <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-3 py-1 text-[10px] font-bold tracking-wider uppercase">
-                <span className="size-1.5 rounded-full bg-citrus"></span>Full
-                Stack
+                <span className="size-1.5 rounded-full bg-citrus"></span>{t("skill.modalBadge")}
               </span>
               <h3 className="mt-4 text-2xl font-black sm:text-3xl">
-                All Technologies
+                {t("skill.modalTitle")}
               </h3>
               <p className="mt-2 text-muted-foreground text-sm sm:text-base leading-relaxed">
-                A collection of programming languages, frameworks, databases, and tools I have used and learned throughout my career.
+                {t("skill.modalDesc")}
               </p>
             </div>
 

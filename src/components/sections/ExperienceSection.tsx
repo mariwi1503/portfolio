@@ -3,9 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { experienceList } from "@/constants";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function ExperienceSection() {
   const [selectedExp, setSelectedExp] = useState<any>(null);
+  const { t, language } = useLanguage();
 
   const dotColors = ["bg-mint", "bg-citrus", "bg-sky", "bg-lilac", "bg-coral"];
 
@@ -18,14 +20,14 @@ export function ExperienceSection() {
           className="reveal max-w-2xl mx-auto text-center"
         >
           <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1.5 text-xs font-bold tracking-[0.18em] uppercase text-ink">
-            <span className="size-2 rounded-full bg-coral"></span>Career
+            <span className="size-2 rounded-full bg-coral"></span>{t("experience.badge")}
           </span>
           <h2 className="mt-5 text-3xl leading-tight font-black sm:text-4xl md:text-5xl">
-            Journey of{" "}
-            <span className="text-gradient-warm">work experience</span>
+            {t("experience.title1")}
+            <span className="text-gradient-warm">{t("experience.title2")}</span>
           </h2>
           <p className="text-muted-foreground mt-4 text-base leading-relaxed sm:text-lg">
-            Five years of growing from a junior developer to leading development projects.
+            {t("experience.subtitle")}
           </p>
         </div>
 
@@ -82,12 +84,12 @@ export function ExperienceSection() {
                             className={`flex flex-wrap items-center gap-2 mb-1 ${isEven ? "md:justify-end" : ""}`}
                           >
                             <span className="rounded-full border border-ink/20 bg-citrus px-2.5 py-0.5 text-[10px] sm:text-xs font-black tracking-widest uppercase text-ink">
-                              {exp.start} — {exp.end}
+                              {exp.start} — {exp.end === "Present" ? t("experience.present") : exp.end}
                             </span>
                             {exp.isActive && (
                               <span
                                 className="flex size-2 rounded-full bg-mint animate-pulse"
-                                title="Current Job"
+                                title={t("experience.currentJob")}
                               ></span>
                             )}
                           </div>
@@ -161,7 +163,7 @@ export function ExperienceSection() {
               <div className="flex-grow">
                 <div className="flex flex-wrap items-center gap-2 mb-3">
                   <span className="rounded-full border border-ink/20 bg-citrus px-3 py-1 text-[10px] font-black uppercase text-ink">
-                    {selectedExp.start} — {selectedExp.end}
+                    {selectedExp.start} — {selectedExp.end === "Present" ? t("experience.present") : selectedExp.end}
                   </span>
                   <span className="rounded-full border border-ink/20 bg-card px-3 py-1 text-[10px] font-black uppercase text-ink">
                     {selectedExp.job}
@@ -192,7 +194,7 @@ export function ExperienceSection() {
                     {selectedExp.isActive && (
                       <span
                         className="size-2 rounded-full bg-mint animate-pulse"
-                        title="Current Job"
+                        title={t("experience.currentJob")}
                       ></span>
                     )}
                   </p>
@@ -208,19 +210,19 @@ export function ExperienceSection() {
             <div className="mt-8 space-y-8">
               <div>
                 <h4 className="text-lg font-black border-b-2 border-ink/10 pb-2 mb-4 text-ink">
-                  About The Company
+                  {t("experience.aboutCompany")}
                 </h4>
                 <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                  {selectedExp.description}
+                  {selectedExp.description[language]}
                 </p>
               </div>
 
               <div>
                 <h4 className="text-lg font-black border-b-2 border-ink/10 pb-2 mb-4 text-ink">
-                  Key Responsibilities & Achievements
+                  {t("experience.keyResponsibilities")}
                 </h4>
                 <ul className="space-y-4">
-                  {selectedExp.responsibilities.map(
+                  {selectedExp.responsibilities[language].map(
                     (resp: string, idx: number) => (
                       <li
                         key={idx}
@@ -255,7 +257,7 @@ export function ExperienceSection() {
                     rel="noreferrer"
                     className="inline-flex w-full sm:w-max justify-center items-center gap-2 rounded-xl border-2 border-ink bg-citrus px-6 py-3.5 text-sm font-black text-ink shadow-[4px_4px_0_var(--ink)] hover:-translate-y-1 transition-transform"
                   >
-                    Visit Company Website
+                    {t("experience.visitWebsite")}
                     <svg
                       width="16"
                       height="16"

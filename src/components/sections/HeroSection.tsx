@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function HeroSection() {
+  const { t } = useLanguage();
   return (
     <section
       id="top"
@@ -26,7 +30,7 @@ export function HeroSection() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-75"></span>
                 <span className="relative inline-flex size-2 rounded-full bg-mint"></span>
               </span>
-              Available for new projects
+              {t("hero.available")}
             </span>
           </div>
           <div
@@ -34,9 +38,9 @@ export function HeroSection() {
             className="reveal"
           >
             <h1 className="mt-6 text-4xl leading-[1.05] font-black sm:text-6xl lg:text-7xl">
-              Hi, I&apos;m <span className="text-gradient-cool">Ary</span>
+              {t("hero.hi")}<span className="text-gradient-cool">Ary</span>
               <br />
-              <span className="relative inline-block">Backend Engineer</span>
+              <span className="relative inline-block">{t("hero.role")}</span>
             </h1>
           </div>
           <div
@@ -44,10 +48,8 @@ export function HeroSection() {
             className="reveal"
           >
             <p className="text-muted-foreground mt-7 max-w-xl text-base leading-relaxed sm:text-lg text-justify">
-              Nearly 5 years of building fast, secure, and
-              maintainable backend systems — from REST &amp; API services, database architecture,
-              to CI/CD pipelines. Also comfortable working on the frontend with
-              React and Next.js, as well as building Mobile Apps from scratch using AI Tools until live on the App Store and Play Store.</p>
+              {t("hero.description")}
+            </p>
           </div>
           <div
             style={{ transitionDelay: "240ms" }}
@@ -58,13 +60,13 @@ export function HeroSection() {
                 href="#projek"
                 className="rounded-xl border-2 border-ink bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-[5px_5px_0_var(--ink)] transition-transform hover:-translate-y-1"
               >
-                View Projects
+                {t("hero.viewProjects")}
               </Link>
               <Link
                 href="#kontak"
                 className="rounded-xl border-2 border-ink bg-card px-6 py-3 text-sm font-bold shadow-[5px_5px_0_var(--ink)] transition-transform hover:-translate-y-1"
               >
-                Let&apos;s Collaborate
+                {t("hero.letsCollaborate")}
               </Link>
               <div className="flex items-center gap-2">
                 <Link
@@ -103,7 +105,7 @@ export function HeroSection() {
                   4+
                 </dt>
                 <dd className="text-muted-foreground mt-1 text-[11px] font-semibold uppercase sm:text-xs">
-                  Years of Experience
+                  {t("hero.yearsExperience")}
                 </dd>
               </div>
               <div className="rounded-2xl border-2 border-ink bg-card px-3 py-4">
@@ -111,7 +113,7 @@ export function HeroSection() {
                   10+
                 </dt>
                 <dd className="text-muted-foreground mt-1 text-[11px] font-semibold uppercase sm:text-xs">
-                  Projects Completed
+                  {t("hero.projectsCompleted")}
                 </dd>
               </div>
               <div className="rounded-2xl border-2 border-ink bg-card px-3 py-4">
@@ -119,7 +121,7 @@ export function HeroSection() {
                   100%
                 </dt>
                 <dd className="text-muted-foreground mt-1 text-[11px] font-semibold uppercase sm:text-xs">
-                  Responsibility
+                  {t("hero.responsibility")}
                 </dd>
               </div>
             </dl>
@@ -137,7 +139,7 @@ export function HeroSection() {
               className="animate-float-slow absolute -right-4 bottom-16 z-10 rounded-2xl border-2 border-ink bg-citrus px-4 py-2 text-xs font-black shadow-[4px_4px_0_var(--ink)]"
               style={{ animationDelay: "-3s" }}
             >
-              99.9% uptime
+              {t("hero.uptime")}
             </div>
             <div className="rotate-3 rounded-[2rem] border-2 border-ink bg-sky p-3 shadow-[10px_10px_0_var(--ink)]">
               <img

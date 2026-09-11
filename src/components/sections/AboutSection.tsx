@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function AboutSection() {
+  const { t } = useLanguage();
   return (
     <section id="tentang" className="relative pt-20 pb-10 sm:pt-28 sm:pb-14">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
@@ -14,14 +18,14 @@ export function AboutSection() {
             <div className="rounded-[2rem] border-2 border-ink bg-card p-8 shadow-[8px_8px_0_var(--ink)]">
               <p className="font-display text-5xl font-black">Hi 👋</p>
               <p className="text-muted-foreground mt-4 leading-relaxed">
-                My name is Muhammad Ary Widodo, I was born and raised in Sumbawa, West Nusa Tenggara, Indonesia, coming from a family of farmers where my first job was working in the fields. Over the years, I took on various roles, including driving and working as a motorcycle taxi driver, before discovering my true calling. Once I found my passion for programming, I committed fully to pursuing it as my lifelong career.
+                {t("about.p1")}
               </p>
               <p className="text-muted-foreground mt-4 leading-relaxed">
-                I am a dedicated and versatile Software Developer with experience in building, maintaining, and scaling web-based applications across diverse industries. My background covers both frontend and backend development, enabling me to contribute throughout the entire software development lifecycle, from system design and implementation to deployment and maintenance.
+                {t("about.p2")}
               </p>
 
               <p className="text-muted-foreground mt-4 leading-relaxed">
-                I possess a strong work ethic and am always eager to learn new things. Furthermore, I am skilled in time management, possess excellent communication skills, and am a logical thinker. I hold a great deal of respect for others and am always willing to lend a helping hand whenever necessary.
+                {t("about.p3")}
               </p>
             </div>
           </div>
@@ -32,15 +36,14 @@ export function AboutSection() {
             className="reveal max-w-2xl"
           >
             <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-1.5 text-xs font-bold tracking-[0.18em] uppercase">
-              <span className="size-2 rounded-full bg-coral"></span>About Me
+              <span className="size-2 rounded-full bg-coral"></span>{t("about.badge")}
             </span>
             <h2 className="mt-5 text-3xl leading-tight font-black sm:text-4xl md:text-5xl">
-              More than just writing{" "}
-              <span className="text-gradient-warm">code</span>
+              {t("about.title1")}
+              <span className="text-gradient-warm">{t("about.title2")}</span>
             </h2>
             <p className="text-muted-foreground mt-4 text-base leading-relaxed sm:text-lg">
-              I believe a good product is born from a neat technical foundation and
-              healthy communication.
+              {t("about.subtitle")}
             </p>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
@@ -49,9 +52,9 @@ export function AboutSection() {
               className="reveal"
             >
               <div className="h-full rounded-2xl border-2 border-ink bg-card p-5 transition-transform hover:-translate-y-1">
-                <h3 className="mt-3 text-base font-black">Maintainable Code</h3>
+                <h3 className="mt-3 text-base font-black">{t("about.feature1Title")}</h3>
                 <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                  Clean, tested, and easy for others to continue.
+                  {t("about.feature1Desc")}
                 </p>
               </div>
             </div>
@@ -60,9 +63,9 @@ export function AboutSection() {
               className="reveal"
             >
               <div className="h-full rounded-2xl border-2 border-ink bg-card p-5 transition-transform hover:-translate-y-1">
-                <h3 className="mt-3 text-base font-black">Performance First</h3>
+                <h3 className="mt-3 text-base font-black">{t("about.feature2Title")}</h3>
                 <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                  Queries, caching, and data structures are considered from the start.
+                  {t("about.feature2Desc")}
                 </p>
               </div>
             </div>
@@ -71,9 +74,9 @@ export function AboutSection() {
               className="reveal"
             >
               <div className="h-full rounded-2xl border-2 border-ink bg-card p-5 transition-transform hover:-translate-y-1">
-                <h3 className="mt-3 text-base font-black">Clear Communication</h3>
+                <h3 className="mt-3 text-base font-black">{t("about.feature3Title")}</h3>
                 <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                  Transparent progress, without confusing jargon.
+                  {t("about.feature3Desc")}
                 </p>
               </div>
             </div>
@@ -82,9 +85,9 @@ export function AboutSection() {
               className="reveal"
             >
               <div className="h-full rounded-2xl border-2 border-ink bg-card p-5 transition-transform hover:-translate-y-1">
-                <h3 className="mt-3 text-base font-black">Continuous Learning</h3>
+                <h3 className="mt-3 text-base font-black">{t("about.feature4Title")}</h3>
                 <p className="text-muted-foreground mt-1 text-sm leading-relaxed">
-                  Always trying out new tools in side projects.
+                  {t("about.feature4Desc")}
                 </p>
               </div>
             </div>
