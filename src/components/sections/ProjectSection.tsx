@@ -34,8 +34,8 @@ const projects = [
     ownership: "Perkim KSB",
     role: "Backend and Devops Engineer",
     contribution: {
-      en: "Built the entire application from frontend to backend, as well as deploying it to the production server.",
-      id: "Membangun seluruh aplikasi dari frontend hingga backend, serta melakukan deployment ke server produksi.",
+      en: "Architected and built backend systems, including VPS server provisioning and DNS management.",
+      id: "Membangun arsitektur backend, mengonfigurasi server VPS, dan mengelola pengaturan DNS/domain.",
     },
     status: "live",
     url: "https://silaju.com",
@@ -356,35 +356,35 @@ export function ProjectSection() {
             {/* Scrollable Content */}
             <div className="flex-1 overflow-y-auto p-6 sm:p-10">
 
-            <div className="mb-8 pr-12">
-              <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-3 py-1 text-[10px] font-bold tracking-wider uppercase">
-                <span className="size-1.5 rounded-full bg-coral"></span>{t("project.modalBadge")}
-              </span>
-              <h3 className="mt-4 text-2xl font-black sm:text-3xl">
-                {t("project.modalTitle")}
-              </h3>
-              <p className="mt-2 text-muted-foreground text-sm sm:text-base leading-relaxed">
-                {t("project.modalDesc")}
-              </p>
-            </div>
+              <div className="mb-8 pr-12">
+                <span className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-3 py-1 text-[10px] font-bold tracking-wider uppercase">
+                  <span className="size-1.5 rounded-full bg-coral"></span>{t("project.modalBadge")}
+                </span>
+                <h3 className="mt-4 text-2xl font-black sm:text-3xl">
+                  {t("project.modalTitle")}
+                </h3>
+                <p className="mt-2 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  {t("project.modalDesc")}
+                </p>
+              </div>
 
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((proj, idx) => {
-                const isWide = idx === 0 || idx === 6;
-                const colSpanClass = isWide ? "md:col-span-2" : "md:col-span-1";
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {projects.map((proj, idx) => {
+                  const isWide = idx === 0 || idx === 6;
+                  const colSpanClass = isWide ? "md:col-span-2" : "md:col-span-1";
 
-                return (
-                  <div key={idx} className={colSpanClass}>
-                    <ProjectCard
-                      proj={proj}
-                      isWide={isWide}
-                      onClick={() => setSelectedProject(proj)}
-                      language={language}
-                    />
-                  </div>
-                );
-              })}
-            </div>
+                  return (
+                    <div key={idx} className={colSpanClass}>
+                      <ProjectCard
+                        proj={proj}
+                        isWide={isWide}
+                        onClick={() => setSelectedProject(proj)}
+                        language={language}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -425,119 +425,119 @@ export function ProjectSection() {
             {/* Scrollable Content */}
             <div className="flex-1 overflow-y-auto p-6 sm:p-8">
 
-            {/* Content Header */}
-            <div className="pr-12">
-              <div className="flex flex-wrap items-center gap-2 mb-3">
-                <span className="rounded-full border-2 border-ink bg-citrus px-3 py-1 text-[10px] font-black uppercase">
-                  {selectedProject.role}
-                </span>
-                {selectedProject.status && (
-                  <span
-                    className={`rounded-full border-2 border-ink px-3 py-1 text-[10px] font-black uppercase ${selectedProject.status === "live" ? "bg-mint" : selectedProject.status === "development" ? "bg-sky" : "bg-coral"}`}
-                  >
-                    {selectedProject.status === "live"
-                      ? t("project.statusLive")
-                      : selectedProject.status === "development"
-                        ? t("project.statusDev")
-                        : t("project.statusOffline")}
+              {/* Content Header */}
+              <div className="pr-12">
+                <div className="flex flex-wrap items-center gap-2 mb-3">
+                  <span className="rounded-full border-2 border-ink bg-citrus px-3 py-1 text-[10px] font-black uppercase">
+                    {selectedProject.role}
                   </span>
-                )}
-              </div>
-              <h3 className="text-2xl font-black sm:text-4xl">
-                {selectedProject.title}
-              </h3>
-            </div>
-
-            {/* Image */}
-            <figure
-              className={`mt-6 overflow-hidden rounded-2xl border-2 border-ink ${selectedProject.bgClass} p-4 sm:p-6`}
-            >
-              <img
-                src={selectedProject.image}
-                alt={selectedProject.title}
-                className="w-full aspect-video rounded-xl object-contain bg-card/20"
-              />
-            </figure>
-
-            {/* Detail Body */}
-            <div className="mt-8 space-y-8">
-              <div>
-                <h4 className="text-lg font-black border-b-2 border-ink/10 pb-2 mb-3">
-                  {t("project.aboutProject")}
-                </h4>
-                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                  {selectedProject.description[language]}
-                </p>
+                  {selectedProject.status && (
+                    <span
+                      className={`rounded-full border-2 border-ink px-3 py-1 text-[10px] font-black uppercase ${selectedProject.status === "live" ? "bg-mint" : selectedProject.status === "development" ? "bg-sky" : "bg-coral"}`}
+                    >
+                      {selectedProject.status === "live"
+                        ? t("project.statusLive")
+                        : selectedProject.status === "development"
+                          ? t("project.statusDev")
+                          : t("project.statusOffline")}
+                    </span>
+                  )}
+                </div>
+                <h3 className="text-2xl font-black sm:text-4xl">
+                  {selectedProject.title}
+                </h3>
               </div>
 
-              {selectedProject.contribution && (
+              {/* Image */}
+              <figure
+                className={`mt-6 overflow-hidden rounded-2xl border-2 border-ink ${selectedProject.bgClass} p-4 sm:p-6`}
+              >
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full aspect-video rounded-xl object-contain bg-card/20"
+                />
+              </figure>
+
+              {/* Detail Body */}
+              <div className="mt-8 space-y-8">
                 <div>
                   <h4 className="text-lg font-black border-b-2 border-ink/10 pb-2 mb-3">
-                    {t("project.myContribution")}
+                    {t("project.aboutProject")}
                   </h4>
                   <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                    {selectedProject.contribution[language]}
+                    {selectedProject.description[language]}
                   </p>
                 </div>
-              )}
 
-              <div className="grid gap-6 sm:grid-cols-2">
-                <div>
-                  <h4 className="text-lg font-black border-b-2 border-ink/10 pb-2 mb-3">
-                    {t("project.techStack")}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedProject.techs.map((tech: string, i: number) => (
-                      <span
-                        key={i}
-                        className="bg-secondary rounded-lg border border-ink/15 px-3 py-1.5 text-xs font-bold"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {selectedProject.ownership && (
+                {selectedProject.contribution && (
                   <div>
                     <h4 className="text-lg font-black border-b-2 border-ink/10 pb-2 mb-3">
-                      {t("project.ownership")}
+                      {t("project.myContribution")}
                     </h4>
-                    <p className="text-sm font-semibold text-muted-foreground bg-ink/5 p-3 rounded-xl border border-ink/10">
-                      {selectedProject.ownership}
+                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+                      {selectedProject.contribution[language]}
                     </p>
                   </div>
                 )}
-              </div>
 
-              {selectedProject.url && (
-                <div className="pt-6 mt-6 border-t-2 border-ink/10">
-                  <a
-                    href={selectedProject.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex w-full sm:w-max justify-center items-center gap-2 rounded-xl border-2 border-ink bg-citrus px-6 py-3.5 text-sm font-black shadow-[4px_4px_0_var(--ink)] hover:-translate-y-1 transition-transform"
-                  >
-                    {t("project.visitProject")}
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                      <polyline points="15 3 21 3 21 9" />
-                      <line x1="10" y1="14" x2="21" y2="3" />
-                    </svg>
-                  </a>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <h4 className="text-lg font-black border-b-2 border-ink/10 pb-2 mb-3">
+                      {t("project.techStack")}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedProject.techs.map((tech: string, i: number) => (
+                        <span
+                          key={i}
+                          className="bg-secondary rounded-lg border border-ink/15 px-3 py-1.5 text-xs font-bold"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {selectedProject.ownership && (
+                    <div>
+                      <h4 className="text-lg font-black border-b-2 border-ink/10 pb-2 mb-3">
+                        {t("project.ownership")}
+                      </h4>
+                      <p className="text-sm font-semibold text-muted-foreground bg-ink/5 p-3 rounded-xl border border-ink/10">
+                        {selectedProject.ownership}
+                      </p>
+                    </div>
+                  )}
                 </div>
-              )}
+
+                {selectedProject.url && (
+                  <div className="pt-6 mt-6 border-t-2 border-ink/10">
+                    <a
+                      href={selectedProject.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex w-full sm:w-max justify-center items-center gap-2 rounded-xl border-2 border-ink bg-citrus px-6 py-3.5 text-sm font-black shadow-[4px_4px_0_var(--ink)] hover:-translate-y-1 transition-transform"
+                    >
+                      {t("project.visitProject")}
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                      </svg>
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
           </div>
         </div>
       )}
