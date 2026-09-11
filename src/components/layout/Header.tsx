@@ -31,7 +31,7 @@ export function Header() {
             href="#skill"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
-            Skill
+            Skills
           </Link>
           <Link
             href="#projek"
