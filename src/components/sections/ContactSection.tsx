@@ -13,7 +13,7 @@ export function ContactSection() {
           <div className="relative overflow-hidden rounded-[2.5rem] border-2 border-ink bg-[image:var(--gradient-hero)] p-8 shadow-[10px_10px_0_var(--ink)] sm:p-14">
             <div className="bg-dots absolute inset-0 opacity-40"></div>
             <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div>
+              <div className="min-w-0">
                 <h2 className="text-3xl leading-tight font-black text-ink sm:text-5xl">
                   Have a project idea?
                   <br />
@@ -41,7 +41,7 @@ export function ContactSection() {
                   </Link>
                 </div>
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-3 min-w-0">
                 <li className="flex items-center gap-4 rounded-2xl border-2 border-ink bg-card/90 px-5 py-4 backdrop-blur-sm">
                   <span className="grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink bg-citrus">
                     <FaEnvelope className="text-xl text-ink" />
