@@ -61,24 +61,22 @@ export function Header() {
           </Link>
           <button
             onClick={toggleLanguage}
-            className="ml-2 flex items-center rounded-xl border-2 border-ink bg-card p-1 shadow-[3px_3px_0_var(--ink)] transition-transform hover:-translate-y-0.5"
+            className="ml-2 flex items-center rounded-xl border-2 border-ink bg-card p-1 shadow-[3px_3px_0_var(--ink)] transition-transform hover:-translate-y-0.5 cursor-pointer"
             aria-label="Toggle Language"
           >
             <span
-              className={`rounded-lg px-3 py-1.5 text-xs font-black transition-all ${
-                language === 'en'
+              className={`rounded-lg px-3 py-1.5 text-xs font-black transition-all ${language === 'en'
                   ? 'bg-primary text-primary-foreground border-2 border-ink shadow-[2px_2px_0_var(--ink)]'
                   : 'text-muted-foreground border-2 border-transparent'
-              }`}
+                }`}
             >
               EN
             </span>
             <span
-              className={`rounded-lg px-3 py-1.5 text-xs font-black transition-all ${
-                language === 'id'
+              className={`rounded-lg px-3 py-1.5 text-xs font-black transition-all ${language === 'id'
                   ? 'bg-primary text-primary-foreground border-2 border-ink shadow-[2px_2px_0_var(--ink)]'
                   : 'text-muted-foreground border-2 border-transparent'
-              }`}
+                }`}
             >
               ID
             </span>
@@ -141,9 +139,27 @@ export function Header() {
                 toggleLanguage();
                 closeMobileMenu();
               }}
-              className="mt-2 text-center rounded-xl border-2 border-ink bg-primary px-4 py-3 text-sm font-black text-primary-foreground shadow-[4px_4px_0_var(--ink)] transition-transform active:translate-y-1 active:shadow-none"
+              className="mt-2 flex w-full items-center rounded-xl border-2 border-ink bg-card p-1 shadow-[4px_4px_0_var(--ink)] transition-transform active:translate-y-1 active:shadow-none"
+              aria-label="Toggle Language"
             >
-              {language === 'en' ? 'Switch to Indonesian (ID)' : 'Beralih ke Inggris (EN)'}
+              <span
+                className={`flex-1 text-center rounded-lg px-4 py-2 text-sm font-black transition-all ${
+                  language === 'en'
+                    ? 'bg-primary text-primary-foreground border-2 border-ink shadow-[2px_2px_0_var(--ink)]'
+                    : 'text-muted-foreground border-2 border-transparent'
+                }`}
+              >
+                EN
+              </span>
+              <span
+                className={`flex-1 text-center rounded-lg px-4 py-2 text-sm font-black transition-all ${
+                  language === 'id'
+                    ? 'bg-primary text-primary-foreground border-2 border-ink shadow-[2px_2px_0_var(--ink)]'
+                    : 'text-muted-foreground border-2 border-transparent'
+                }`}
+              >
+                ID
+              </span>
             </button>
           </div>
         </div>
