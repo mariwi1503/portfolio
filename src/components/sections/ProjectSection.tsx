@@ -7,7 +7,7 @@ const projects = [
   {
     image: "/portfolio/trubus.png",
     title: "Halo Trubus",
-    tags: ["Web + Mobile", "2026"],
+    tags: ["Consultation & E-Commerce", "2026"],
     description: {
       en: "Halo Trubus is an integrated agricultural application that helps you fulfill your gardening and cultivation needs more easily, practically, and reliably. Through Halo Trubus, you can shop for various agricultural products, read informative articles, and consult directly with experts to get solutions tailored to your plants' needs.",
       id: "Halo Trubus adalah aplikasi pertanian terintegrasi yang membantu Anda memenuhi kebutuhan berkebun dan budidaya dengan lebih mudah, praktis, dan dapat diandalkan. Melalui Halo Trubus, Anda dapat berbelanja berbagai produk pertanian, membaca artikel informatif, dan berkonsultasi langsung dengan para ahli untuk mendapatkan solusi yang disesuaikan dengan kebutuhan tanaman Anda.",
@@ -19,7 +19,11 @@ const projects = [
       id: "Saya memimpin seluruh Siklus Hidup Pengembangan Perangkat Lunak (SDLC) dari prototipe awal dan desain arsitektur hingga rilis produksi akhir.",
     },
     status: "live",
-    url: "https://apps.apple.com/id/app/halo-trubus/id6790691531",
+    urls: [
+      { label: "Portal", url: "https://portal.tokotrubus.com/" },
+      { label: "App Store", url: "https://apps.apple.com/id/app/halo-trubus/id6790691531" },
+      { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.halotrubus" },
+    ],
     techs: ["NestJS", "Next.js", "PostgreSQL", "React Native", "MinIO"],
     bgClass: "bg-lilac",
   },
@@ -38,7 +42,7 @@ const projects = [
       id: "Membangun arsitektur backend, mengonfigurasi server VPS, dan mengelola pengaturan DNS/domain.",
     },
     status: "live",
-    url: "https://silaju.com",
+    urls: [{ label: "Website", url: "https://silaju.com" }],
     techs: ["Node.js", "PostgreSQL", "React", "MinIO"],
     bgClass: "bg-mint",
   },
@@ -57,7 +61,7 @@ const projects = [
       id: "mengerjakan tugas-tugas ringan yang diberikan oleh tech lead, seperti menyesuaikan respons API dan mengimplementasikan perbaikan, namun saya tidak banyak berkontribusi di sisi fitur karena aplikasinya sudah cukup besar ketika saya bergabung.",
     },
     status: "live",
-    url: "https://play.google.com/store/apps/details?id=com.superagent.agent&utm_source=website-header",
+    urls: [{ label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.superagent.agent&utm_source=website-header" }, { label: "Web", url: "https://superapp.id/" }],
     techs: [
       "Nodejs",
       "Express",
@@ -84,7 +88,7 @@ const projects = [
       id: "Membangun aplikasi sisi server yang mendukung aplikasi web, di mana saya terlibat dalam lebih dari 50% semua fitur backend",
     },
     status: "live",
-    url: "https://cosiri.incit.org/",
+    urls: [{ label: "Website", url: "https://cosiri.incit.org/" }],
     techs: ["Nodejs", "Nest", "Prisma", "PosgreSQL", "React", "Tailwind"],
     bgClass: "bg-coral",
   },
@@ -103,7 +107,7 @@ const projects = [
       id: "Membangun aplikasi sisi server yang mendukung aplikasi web, di mana saya terlibat dalam hampir 80% semua fitur backend",
     },
     status: "live",
-    url: "https://siri.incit.org/",
+    urls: [{ label: "Website", url: "https://siri.incit.org/" }],
     techs: ["Nodejs", "Nest", "Prisma", "PosgreSQL", "React", "Tailwind"],
     bgClass: "bg-sky",
   },
@@ -122,7 +126,7 @@ const projects = [
       id: "Membangun website",
     },
     status: "live",
-    url: "https://ikasum.vercel.app/",
+    urls: [{ label: "Website", url: "https://ikasum.vercel.app/" }],
     techs: ["Nextjs", "Tailwind", "V0"],
     bgClass: "bg-lilac",
   },
@@ -141,7 +145,7 @@ const projects = [
       id: "Bertindak sebagai engineering lead dan bertanggung jawab untuk menyediakan aplikasi backend yang mendukung platform web dan mobile",
     },
     status: "Private",
-    url: "",
+    urls: [],
     techs: ["Next.js", "Prisma", "MySQL"],
     bgClass: "bg-citrus",
   },
@@ -160,7 +164,7 @@ const projects = [
       id: "membangun aplikasi sisi server yang mendukung aplikasi web dan terlibat dalam semua fitur backend, karena saya adalah satu-satunya pengembang backend",
     },
     status: "offline",
-    url: "",
+    urls: [],
     techs: ["Nodejs", "React", "Tailwind", "Express"],
     bgClass: "bg-mint",
   },
@@ -179,7 +183,7 @@ const projects = [
       id: "Membangun aplikasi sisi server yang mendukung platform web dan mobile",
     },
     status: "live",
-    url: "",
+    urls: [],
     techs: ["Nodejs", "Next", "React Native", "Tailwind", "Nest", "Prisma"],
     bgClass: "bg-coral",
   },
@@ -510,30 +514,33 @@ export function ProjectSection() {
                   )}
                 </div>
 
-                {selectedProject.url && (
-                  <div className="pt-6 mt-6 border-t-2 border-ink/10">
-                    <a
-                      href={selectedProject.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex w-full sm:w-max justify-center items-center gap-2 rounded-xl border-2 border-ink bg-citrus px-6 py-3.5 text-sm font-black shadow-[4px_4px_0_var(--ink)] hover:-translate-y-1 transition-transform"
-                    >
-                      {t("project.visitProject")}
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                {selectedProject.urls && selectedProject.urls.length > 0 && (
+                  <div className="pt-6 mt-6 border-t-2 border-ink/10 flex flex-wrap gap-4">
+                    {selectedProject.urls.map((link: any, i: number) => (
+                      <a
+                        key={i}
+                        href={link.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex w-full sm:w-max justify-center items-center gap-2 rounded-xl border-2 border-ink bg-citrus px-6 py-3.5 text-sm font-black shadow-[4px_4px_0_var(--ink)] hover:-translate-y-1 transition-transform"
                       >
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                        <polyline points="15 3 21 3 21 9" />
-                        <line x1="10" y1="14" x2="21" y2="3" />
-                      </svg>
-                    </a>
+                        {link.label}
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                          <polyline points="15 3 21 3 21 9" />
+                          <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                      </a>
+                    ))}
                   </div>
                 )}
               </div>
