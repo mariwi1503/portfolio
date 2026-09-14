@@ -47,6 +47,50 @@ const projects = [
     bgClass: "bg-mint",
   },
   {
+    image: "/portfolio/operi.png",
+    title: "Operi",
+    tags: ["Business", "2024"],
+    description: {
+      en: "The Operational Excellence Readiness Index (OPERI) is a tool designed to increase productivity, initiate digitalization, and accelerate growth with a focus on micro-enterprises. OPERI generates an automated roadmap, providing guidance for the next transformation steps to enhance the company's operational needs.",
+      id: "Operational Excellence Readiness Index (OPERI) adalah alat yang dirancang untuk meningkatkan produktivitas, memulai digitalisasi, dan mempercepat pertumbuhan dengan fokus pada Usaha Mikro. OPERI akan menghasilkan peta jalan otomatis, yang memberikan panduan untuk langkah transformasi berikutnya dalam meningkatkan kebutuhan operasi perusahaan.",
+    },
+    ownership: "INCIT (International Center for Industrial Transformation).",
+    role: "Backend Engineer",
+    contribution: {
+      en: "I contribute primarily as a backend engineer, though lately I’ve also been getting involved in frontend work.",
+      id: "Kontribusi saya sebagian besar di backend engineering, meski belakangan ini saya juga turut membantu pengerjaan frontend."
+    },
+    status: "live",
+    urls: [{ label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.operi" }, { label: "App Store", url: "https://apps.apple.com/us/app/operi-operational-readiness/id6744343045" }, { label: "Web", url: "https://operi.incit.org/" }],
+    techs: [
+      "Nodejs",
+      "Nest",
+      "PostgreSQL",
+      "React Native",
+      "Firebase",
+    ],
+    bgClass: "bg-citrus",
+  },
+  {
+    image: "/portfolio/cosiri.png",
+    title: "Cosiri",
+    tags: ["Business", "2023"],
+    description: {
+      en: "The Consumer Sustainability Industry Readiness Index (COSIRI) is a comprehensive framework and set of tools designed to assist manufacturers, regardless of size or industry, to embed sustainability into all their operations.",
+      id: "Consumer Sustainability Industry Readiness Index (COSIRI) adalah kerangka kerja komprehensif dan seperangkat alat yang dirancang untuk membantu produsen, terlepas dari ukuran atau industri, untuk menanamkan keberlanjutan ke dalam semua operasi mereka.",
+    },
+    ownership: "INCIT (International Center for Industrial Transformation).",
+    role: "Backend Engineer",
+    contribution: {
+      en: "Building the server-side application that powers the web app, where I was involved in over 50% of all backend features",
+      id: "Membangun aplikasi sisi server yang mendukung aplikasi web, di mana saya terlibat dalam lebih dari 50% semua fitur backend",
+    },
+    status: "live",
+    urls: [{ label: "Website", url: "https://cosiri.incit.org/" }],
+    techs: ["Nodejs", "Nest", "Prisma", "PosgreSQL", "React", "Tailwind"],
+    bgClass: "bg-coral",
+  },
+  {
     image: "/portfolio/super.png",
     title: "SuperApp",
     tags: ["E-commerce", "2021"],
@@ -74,28 +118,9 @@ const projects = [
     bgClass: "bg-citrus",
   },
   {
-    image: "/portfolio/cosiri.png",
-    title: "Cosiri",
-    tags: ["Web App", "2023"],
-    description: {
-      en: "The Consumer Sustainability Industry Readiness Index (COSIRI) is a comprehensive framework and set of tools designed to assist manufacturers, regardless of size or industry, to embed sustainability into all their operations.",
-      id: "Consumer Sustainability Industry Readiness Index (COSIRI) adalah kerangka kerja komprehensif dan seperangkat alat yang dirancang untuk membantu produsen, terlepas dari ukuran atau industri, untuk menanamkan keberlanjutan ke dalam semua operasi mereka.",
-    },
-    ownership: "INCIT (International Center for Industrial Transformation).",
-    role: "Backend Engineer",
-    contribution: {
-      en: "Building the server-side application that powers the web app, where I was involved in over 50% of all backend features",
-      id: "Membangun aplikasi sisi server yang mendukung aplikasi web, di mana saya terlibat dalam lebih dari 50% semua fitur backend",
-    },
-    status: "live",
-    urls: [{ label: "Website", url: "https://cosiri.incit.org/" }],
-    techs: ["Nodejs", "Nest", "Prisma", "PosgreSQL", "React", "Tailwind"],
-    bgClass: "bg-coral",
-  },
-  {
     image: "/portfolio/siri.png",
     title: "Siri",
-    tags: ["Web App", "2023"],
+    tags: ["Business", "2023"],
     description: {
       en: "The Smart Industry Readiness Index (SIRI) is the world’s first independent digital maturity assessment for manufacturers. It comprises a suite of frameworks and tools to help manufacturers – regardless of size and industry – start, scale, and sustain their manufacturing transformation journeys.",
       id: "Smart Industry Readiness Index (SIRI) adalah penilaian kematangan digital independen pertama di dunia untuk produsen. Ini terdiri dari serangkaian kerangka kerja dan alat untuk membantu produsen - terlepas dari ukuran dan industri - memulai, menskalakan, dan mempertahankan perjalanan transformasi manufaktur mereka.",
