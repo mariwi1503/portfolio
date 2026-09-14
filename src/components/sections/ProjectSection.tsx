@@ -32,8 +32,8 @@ const projects = [
     title: "Silaju Perumahan",
     tags: ["Web App", "2026"],
     description: {
-      en: "Silaju Perumahan is a web application for managing residential data",
-      id: "Silaju Perumahan adalah aplikasi web untuk mengelola data perumahan",
+      en: "Silaju Perumahan is a web-based platform for managing housing assistance recipient data in West Sumbawa Regency.",
+      id: "Silaju Perumahan merupakan situs web pengelolaan data penerima bantuan perumahan di Kabupaten Sumbawa Barat.",
     },
     ownership: "Perkim KSB",
     role: "Backend and Devops Engineer",
@@ -137,25 +137,6 @@ const projects = [
     bgClass: "bg-sky",
   },
   {
-    image: "/portfolio/ikasum.png",
-    title: "IKASUM Batam",
-    tags: ["Social", "2024"],
-    description: {
-      en: "The Ikasum website serves as an information-sharing platform and a database for Sumbawa residents living in Batam, designed to streamline coordination and strengthen community bonds.",
-      id: "Website Ikasum berfungsi sebagai platform berbagi informasi dan database bagi warga Sumbawa yang tinggal di Batam, dirancang untuk menyederhanakan koordinasi dan memperkuat ikatan komunitas.",
-    },
-    ownership: "Owned by me",
-    role: "Founder and Developer",
-    contribution: {
-      en: "Building the website",
-      id: "Membangun website",
-    },
-    status: "live",
-    urls: [{ label: "Website", url: "https://ikasum.vercel.app/" }],
-    techs: ["Nextjs", "Tailwind", "V0"],
-    bgClass: "bg-lilac",
-  },
-  {
     image: "/portfolio/hulucash.png",
     title: "Hulucash",
     tags: ["Fintech", "2023"],
@@ -211,6 +192,25 @@ const projects = [
     urls: [],
     techs: ["Nodejs", "Next", "React Native", "Tailwind", "Nest", "Prisma"],
     bgClass: "bg-coral",
+  },
+  {
+    image: "/portfolio/ikasum.png",
+    title: "IKASUM Batam",
+    tags: ["Social", "2024"],
+    description: {
+      en: "The Ikasum website serves as an information-sharing platform and a database for Sumbawa residents living in Batam, designed to streamline coordination and strengthen community bonds.",
+      id: "Website Ikasum berfungsi sebagai platform berbagi informasi dan database bagi warga Sumbawa yang tinggal di Batam, dirancang untuk menyederhanakan koordinasi dan memperkuat ikatan komunitas.",
+    },
+    ownership: "Owned by me",
+    role: "Founder and Developer",
+    contribution: {
+      en: "Building the website",
+      id: "Membangun website",
+    },
+    status: "live",
+    urls: [{ label: "Website", url: "https://ikasum.vercel.app/" }],
+    techs: ["Nextjs", "Tailwind", "V0"],
+    bgClass: "bg-lilac",
   },
 
 
