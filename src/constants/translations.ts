@@ -13,7 +13,7 @@ export const translations = {
     hero: {
       available: "Available for new projects",
       hi: "Hi, I'm ",
-      role: "Backend Engineer",
+      role: "Software Engineer",
       description:
         "Nearly 5 years of building fast, secure, and maintainable backend systems — from REST & API services, database architecture, to CI/CD pipelines. Also comfortable working on the frontend with React and Next.js, as well as building Mobile Apps from scratch using AI Tools until live on the App Store and Play Store.",
       viewProjects: "View Projects",
@@ -122,7 +122,7 @@ export const translations = {
     hero: {
       available: "Tersedia untuk proyek baru",
       hi: "Halo, Saya ",
-      role: "Backend Engineer",
+      role: "Software Engineer",
       description:
         "Hampir 5 tahun membangun sistem backend yang cepat, aman, dan mudah dipelihara — mulai dari layanan REST & API, arsitektur basis data, hingga pipeline CI/CD. Juga terbiasa bekerja di frontend dengan React dan Next.js, serta membangun Aplikasi Mobile dari awal menggunakan perangkat AI hingga rilis di App Store dan Play Store.",
       viewProjects: "Lihat Proyek",

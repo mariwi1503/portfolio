@@ -46,6 +46,7 @@
 
 @layer base {
   :root {
+    color-scheme: only light;
     --radius: 1rem;
     --background: oklch(98.5% 0.012 95);
     --foreground: oklch(19% 0.03 265);

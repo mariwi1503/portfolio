@@ -16,7 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: "#fdfbf4",
+  colorScheme: "light",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
@@ -24,7 +25,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Ary - Problem Solver",
+    default: "Ary - Software Engineer",
     template: "%s | Ary",
   },
   description: "Ary's professional portfolio, a Backend Engineer with nearly 5 years of experience building fast, secure, and maintainable application systems.",

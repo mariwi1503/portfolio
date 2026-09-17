@@ -19,7 +19,7 @@ export function HeroSection() {
         className="animate-blob absolute -right-28 top-24 -z-10 size-72 bg-citrus/50 blur-2xl sm:size-96"
         style={{ animationDelay: "-5s" }}
       ></div>
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+      <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.35fr_0.85fr] lg:items-center">
         <div>
           <div
             style={{ transitionDelay: "0ms" }}
@@ -37,10 +37,12 @@ export function HeroSection() {
             style={{ transitionDelay: "80ms" }}
             className="reveal"
           >
-            <h1 className="mt-6 text-4xl leading-[1.05] font-black sm:text-6xl lg:text-7xl">
+            <h1 className="mt-6 text-4xl leading-[1.05] font-black sm:text-6xl xl:text-7xl">
               {t("hero.hi")}<span className="text-gradient-cool">Ary</span>
               <br />
-              <span className="relative inline-block">{t("hero.role")}</span>
+              <span className="relative inline-block whitespace-nowrap text-[2rem] min-[360px]:text-4xl sm:text-6xl xl:text-7xl">
+                {t("hero.role")}
+              </span>
             </h1>
           </div>
           <div
