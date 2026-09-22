@@ -42,7 +42,7 @@ export const experienceList = [
     logo: "/experience/tmt.png",
     isActive: false,
     company: "PT Trimitra Mandiri Teknologi",
-    role: "Fullstack Developer",
+    role: "Lead Engineer Developer",
     job: "Parttime",
     start: "Feb 2026",
     end: "Present",
