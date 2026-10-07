@@ -2,7 +2,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Use Node.js 24. With nvm, install and activate the project version, then install dependencies:
+
+```bash
+nvm install
+nvm use
+npm ci
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
