@@ -104,7 +104,7 @@ export function HeroSection() {
             <dl className="mt-10 grid max-w-lg grid-cols-3 gap-3">
               <div className="rounded-2xl border-2 border-ink bg-card px-3 py-4">
                 <dt className="font-display text-2xl font-black sm:text-3xl">
-                  4+
+                  5
                 </dt>
                 <dd className="text-muted-foreground mt-1 text-[11px] font-semibold uppercase sm:text-xs">
                   {t("hero.yearsExperience")}
