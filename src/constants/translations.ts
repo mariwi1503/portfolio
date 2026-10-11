@@ -4,6 +4,7 @@ export const translations = {
     nav: {
       skills: "Skills",
       projects: "Projects",
+      demos: "Prototypes",
       experience: "Experience",
       testimonials: "Testimonials",
       about: "About",
@@ -77,6 +78,26 @@ export const translations = {
       statusDev: "⚙ In Development",
       statusOffline: "○ Offline",
     },
+    // Digital prototypes
+    demo: {
+      badge: "Digital Prototypes",
+      title1: "From ideas to ",
+      title2: "prototypes",
+      subtitle: "A collection of application and website prototypes exploring concepts, interfaces, and user flows with sample data.",
+      illustration: "Illustrative preview",
+      screenshotAlt: "Prototype preview:",
+      tryDemo: "View Prototype",
+      viewPreview: "View Prototype",
+      comingSoon: "Preview unavailable",
+      discussNeeds: "Discuss Your Needs",
+      viewAll: "View All Prototypes",
+      modalBadge: "Catalog",
+      modalTitle: "All Prototypes",
+      modalDesc: "Explore all application and website prototypes. Open a prototype to see its interface and user flows.",
+      closeModal: "Close prototype gallery",
+      noteTitle: "An exploration for future development",
+      note: "These prototypes use sample data to explore concepts, interfaces, and user flows as a starting point for further development.",
+    },
     // Experience
     experience: {
       badge: "Career",
@@ -113,6 +134,7 @@ export const translations = {
     nav: {
       skills: "Keahlian",
       projects: "Proyek",
+      demos: "Prototipe",
       experience: "Pengalaman",
       testimonials: "Testimoni",
       about: "Tentang",
@@ -185,6 +207,26 @@ export const translations = {
       statusLive: "● Live",
       statusDev: "⚙ Dalam Pengembangan",
       statusOffline: "○ Offline",
+    },
+    // Digital prototypes
+    demo: {
+      badge: "Prototipe Digital",
+      title1: "Dari ide menjadi ",
+      title2: "prototipe",
+      subtitle: "Kumpulan prototipe aplikasi dan website untuk mengeksplorasi konsep, tampilan, dan alur penggunaan dengan data contoh.",
+      illustration: "Preview ilustratif",
+      screenshotAlt: "Preview prototipe:",
+      tryDemo: "Lihat Prototipe",
+      viewPreview: "Lihat Prototipe",
+      comingSoon: "Preview belum tersedia",
+      discussNeeds: "Diskusikan Kebutuhan",
+      viewAll: "Lihat Semua Prototipe",
+      modalBadge: "Katalog",
+      modalTitle: "Semua Prototipe",
+      modalDesc: "Jelajahi semua prototipe aplikasi dan website. Buka prototipe untuk melihat tampilan dan alur penggunaannya.",
+      closeModal: "Tutup galeri prototipe",
+      noteTitle: "Eksplorasi untuk pengembangan selanjutnya",
+      note: "Prototipe ini menggunakan data contoh untuk mengeksplorasi konsep, tampilan, dan alur penggunaan sebagai dasar pengembangan lebih lanjut.",
     },
     // Experience
     experience: {

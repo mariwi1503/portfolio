@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-5">
-      <nav className="relative mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded-2xl border-2 border-ink px-4 py-3 transition-all duration-300 md:flex md:justify-between bg-card/60 backdrop-blur-sm z-50">
+      <nav className="relative mx-auto grid max-w-6xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 rounded-2xl border-2 border-ink px-4 py-3 transition-all duration-300 lg:flex lg:justify-between bg-card/60 backdrop-blur-sm z-50">
         <Link href="#top" className="flex min-w-0 items-center gap-2" onClick={closeMobileMenu}>
           <span className="grid size-9 shrink-0 place-items-center rounded-xl border-2 border-ink bg-citrus font-display text-sm font-black">
             MA
@@ -28,7 +28,7 @@ export function Header() {
             Muhammad Ary
           </span>
         </Link>
-        <div className="hidden items-center gap-1 md:flex">
+        <div className="hidden items-center gap-1 lg:flex">
           <Link
             href="#skill"
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
@@ -40,6 +40,12 @@ export function Header() {
             className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
           >
             {t("nav.projects")}
+          </Link>
+          <Link
+            href="#demo"
+            className="hover:bg-secondary rounded-lg px-3 py-2 text-sm font-semibold transition-colors"
+          >
+            {t("nav.demos")}
           </Link>
           <Link
             href="#pengalaman"
@@ -84,7 +90,7 @@ export function Header() {
         </div>
         <button
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          className="grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink bg-card md:hidden transition-transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none"
+          className="grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink bg-card lg:hidden transition-transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none"
           onClick={toggleMobileMenu}
         >
           {isMobileMenuOpen ? (
@@ -97,7 +103,7 @@ export function Header() {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="absolute left-3 right-3 top-full mt-2 rounded-2xl border-2 border-ink bg-card p-4 shadow-[6px_6px_0_var(--ink)] md:hidden animate-in slide-in-from-top-4 fade-in duration-200">
+        <div className="absolute left-3 right-3 top-full mt-2 rounded-2xl border-2 border-ink bg-card p-4 shadow-[6px_6px_0_var(--ink)] lg:hidden animate-in slide-in-from-top-4 fade-in duration-200">
           <div className="flex flex-col gap-2">
             <Link
               href="#skill"
@@ -112,6 +118,13 @@ export function Header() {
               className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
             >
               {t("nav.projects")}
+            </Link>
+            <Link
+              href="#demo"
+              onClick={closeMobileMenu}
+              className="hover:bg-secondary rounded-xl px-4 py-3 text-sm font-bold transition-colors"
+            >
+              {t("nav.demos")}
             </Link>
             <Link
               href="#pengalaman"

@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { SkillSection } from "@/components/sections/SkillSection";
 import { ProjectSection } from "@/components/sections/ProjectSection";
+import { DemoSection } from "@/components/sections/DemoSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { TestimonialSection } from "@/components/sections/TestimonialSection";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -19,6 +20,7 @@ export default function Home() {
           <HeroSection />
           <SkillSection />
           <ProjectSection />
+          <DemoSection />
           <ExperienceSection />
           <TestimonialSection />
           <AboutSection />
