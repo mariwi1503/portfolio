@@ -6,7 +6,7 @@ import { experienceList } from "@/constants";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function ExperienceSection() {
-  const [selectedExp, setSelectedExp] = useState<any>(null);
+  const [selectedExp, setSelectedExp] = useState<(typeof experienceList)[number] | null>(null);
   const { t, language } = useLanguage();
 
   const dotColors = ["bg-mint", "bg-citrus", "bg-sky", "bg-lilac", "bg-coral"];
@@ -67,13 +67,15 @@ export function ExperienceSection() {
                         className={`cursor-pointer group w-full text-left rounded-[2rem] border-2 border-ink bg-card p-4 sm:p-6 shadow-[6px_6px_0_var(--ink)] transition-transform duration-300 hover:-translate-y-1.5 focus:outline-none focus:ring-4 focus:ring-ink flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 ${isEven ? "md:flex-row-reverse md:text-right" : ""}`}
                       >
                         <div className="shrink-0 rounded-2xl bg-white p-1.5 border-2 border-ink transition-transform group-hover:scale-105 overflow-hidden">
-                          <Image
-                            src={exp.logo}
-                            alt={exp.company}
-                            width={64}
-                            height={64}
-                            className="rounded-xl object-contain mix-blend-multiply"
-                          />
+                          <div className="relative size-16">
+                            <Image
+                              src={exp.logo}
+                              alt={exp.company}
+                              fill
+                              sizes="64px"
+                              className="rounded-xl object-contain mix-blend-multiply"
+                            />
+                          </div>
                         </div>
 
                         {/* Content */}
@@ -152,13 +154,15 @@ export function ExperienceSection() {
             {/* Header Modal */}
             <div className="flex flex-col sm:flex-row items-start gap-6 pr-12">
               <div className="shrink-0 rounded-[2rem] bg-white p-2 border-4 border-ink shadow-[4px_4px_0_var(--ink)] overflow-hidden">
-                <Image
-                  src={selectedExp.logo}
-                  alt={selectedExp.company}
-                  width={90}
-                  height={90}
-                  className="rounded-2xl object-contain mix-blend-multiply"
-                />
+                <div className="relative size-[90px]">
+                  <Image
+                    src={selectedExp.logo}
+                    alt={selectedExp.company}
+                    fill
+                    sizes="90px"
+                    className="rounded-2xl object-contain mix-blend-multiply"
+                  />
+                </div>
               </div>
               <div className="flex-grow">
                 <div className="flex flex-wrap items-center gap-2 mb-3">
