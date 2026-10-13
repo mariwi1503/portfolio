@@ -13,7 +13,7 @@ const themes = {
   lilac: "bg-lilac",
 };
 
-function DemoCard({ demo, onContactClick }: { demo: DemoApp; onContactClick?: () => void }) {
+function DemoCard({ demo }: { demo: DemoApp }) {
   const { t, language } = useLanguage();
 
   return (
@@ -88,7 +88,7 @@ function DemoCard({ demo, onContactClick }: { demo: DemoApp; onContactClick?: ()
             </li>
           ))}
         </ul>
-        <div className="mt-auto space-y-3 pt-2">
+        <div className="mt-auto pt-2">
           {demo.url ? (
             <a
               href={demo.url}
@@ -105,10 +105,6 @@ function DemoCard({ demo, onContactClick }: { demo: DemoApp; onContactClick?: ()
               {t("demo.comingSoon")}
             </button>
           )}
-          <Link href="#kontak" onClick={onContactClick} className="flex items-center justify-center gap-2 rounded-lg px-2 py-2 text-sm font-bold transition-colors hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
-            {t("demo.discussNeeds")}
-            <FaArrowRight aria-hidden="true" className="size-3" />
-          </Link>
         </div>
       </div>
     </article>
@@ -213,7 +209,7 @@ export function DemoSection() {
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {demoApps.map((demo) => (
-                <DemoCard key={demo.id} demo={demo} onContactClick={() => setIsModalOpen(false)} />
+                <DemoCard key={demo.id} demo={demo} />
               ))}
             </div>
           </div>
