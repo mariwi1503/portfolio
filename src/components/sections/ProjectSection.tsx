@@ -72,6 +72,28 @@ const projects = [
     bgClass: "bg-citrus",
   },
   {
+    image: "/portfolio/acs.png",
+    title: "Alpha Core Solution",
+    tags: ["Landing Page", "2026"],
+    description: {
+      en: "Alpha Core Solution is a company profile landing page that introduces PT. Alpha Core Solution, presenting its services, values, and contact information to help prospective clients get to know the company.",
+      id: "Alpha Core Solution adalah landing page company profile yang memperkenalkan PT. Alpha Core Solution, menampilkan layanan, nilai, serta informasi kontak perusahaan untuk membantu calon klien mengenal perusahaan lebih dekat.",
+    },
+    ownership: "PT. Alpha Core Solution",
+    role: "Fullstack Engineer",
+    contribution: {
+      en: "I handled the entire project end to end, from building the website to deploying the application and setting up the hosting.",
+      id: "Saya mengerjakan seluruh proyek dari awal hingga akhir, mulai dari membangun website, mendeploy aplikasi, hingga melakukan setup hosting.",
+    },
+    status: "live",
+    urls: [{ label: "Website", url: "https://www.alphacoresolution.id/" }],
+    techs: [
+      "Nodejs",
+      "NextJS",
+    ],
+    bgClass: "bg-citrus",
+  },
+  {
     image: "/portfolio/cosiri.png",
     title: "Cosiri",
     tags: ["Business", "2023"],
