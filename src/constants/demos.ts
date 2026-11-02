@@ -38,8 +38,8 @@ export const demoApps: DemoApp[] = [
     linkType: "demo",
   },
   {
-    id: "tadika",
-    title: "Tadika Ceria",
+    id: "azzahra",
+    title: "Sekolah Azzahra",
     platform: "Web",
     category: { en: "Educational Services", id: "Layanan Pendidikan" },
     description: {
@@ -47,12 +47,12 @@ export const demoApps: DemoApp[] = [
       id: "Aplikasi manajemen yang memudahkan wali murid, Guru dan juga admin dalam mengontrol kegiatan belajar anak",
     },
     features: {
-      en: ['Dashboard', 'Activity Tracking', 'Grade Tracking', 'Calendar & Schedule'],
-      id: ["Dashboard", 'Pantau Kegiatan', 'Pantau Nilai', 'Kelender dan Jadwal'],
+      en: ['Dashboard', 'Grade Tracking', 'Calendar & Schedule'],
+      id: ["Dashboard", 'Pantau Nilai', 'Kelender dan Jadwal'],
     },
     theme: "sky",
-    screenshot: '/prototype/tadika.png',
-    url: 'https://tadika-one.vercel.app/',
+    screenshot: '/prototype/azzahra.png',
+    url: 'https://web-sekolah-ruddy-iota.vercel.app',
     linkType: "demo",
   },
   {
@@ -107,6 +107,24 @@ export const demoApps: DemoApp[] = [
     theme: "sky",
     screenshot: '/prototype/vivid.png',
     url: 'https://brand-event.vercel.app/',
+    linkType: "demo",
+  },
+  {
+    id: "tadika",
+    title: "Tadika Ceria",
+    platform: "Web",
+    category: { en: "Educational Services", id: "Layanan Pendidikan" },
+    description: {
+      en: "A management application that makes it easy for parents, teachers, and administrators to monitor children's learning activities.",
+      id: "Aplikasi manajemen yang memudahkan wali murid, Guru dan juga admin dalam mengontrol kegiatan belajar anak",
+    },
+    features: {
+      en: ['Dashboard', 'Activity Tracking', 'Grade Tracking', 'Calendar & Schedule'],
+      id: ["Dashboard", 'Pantau Kegiatan', 'Pantau Nilai', 'Kelender dan Jadwal'],
+    },
+    theme: "sky",
+    screenshot: '/prototype/tadika.png',
+    url: 'https://tadika-one.vercel.app/',
     linkType: "demo",
   },
 ];
